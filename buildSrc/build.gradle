@@ -1,0 +1,20 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+
+gradlePlugin {
+    plugins {
+        javaPlugin {
+            id = 'jys-migration'
+            implementationClass = 'JysMigrationPlugin'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.6'
+}
